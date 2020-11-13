@@ -17,8 +17,9 @@ public class Client implements Serializable {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
 	@Column(length=50)
-	private String nomFamille;
-	
+	private String nom;
+	@Column(length=50)
+	private String prenom;
 	@Column(length=50)
 	private String adresse;
 	@Column(length=50)
@@ -28,13 +29,12 @@ public class Client implements Serializable {
 	@JoinColumn(name="idVillage")
 	
     private  Village village = new Village ();
-	
-	
 
-	public Client(int id, String nomFamille, String adresse, String telephone, Village village) {
+	public Client(int id, String nom, String prenom, String adresse, String telephone, Village village) {
 		super();
 		this.id = id;
-		this.nomFamille = nomFamille;
+		this.nom = nom;
+		this.prenom = prenom;
 		this.adresse = adresse;
 		this.telephone = telephone;
 		this.village = village;
@@ -52,12 +52,20 @@ public class Client implements Serializable {
 		this.id = id;
 	}
 
-	public String getNomFamille() {
-		return nomFamille;
+	public String getNom() {
+		return nom;
 	}
 
-	public void setNomFamille(String nomFamille) {
-		this.nomFamille = nomFamille;
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+
+	public String getPrenom() {
+		return prenom;
+	}
+
+	public void setPrenom(String prenom) {
+		this.prenom = prenom;
 	}
 
 	public String getAdresse() {
@@ -85,5 +93,6 @@ public class Client implements Serializable {
 	}
 	
 	
+
 
 }
