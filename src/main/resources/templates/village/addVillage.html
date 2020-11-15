@@ -1,10 +1,59 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VILLAGE</title>
+<link rel="stylesheet" type="text/css"
+	th:href="@{../css/bootstrap.min.css}">
+<link rel="stylesheet" type="text/css"
+	th:href="@{../css/datepicker3.css}">
+<link rel="stylesheet" type="text/css" th:href="@{../css/styles.css}"/>
+<link  rel="stylesheet}" th:href="@{../css/font-awesome.min.css}" />
+<head />
 <body>
 
+	<table class="table table-bordered table-striped">
+		<thead>
+			<tr>
+				<td>id</td>
+				<th>Village</th>
+			</tr>
+		</thead>
+		<tbody>
+
+			<tr th:each="v : ${listeVillage}">
+		
+				<td th:text="${v.id}"></td>
+				<td th:text="${v.nomVillage}"></td>
+
+				</tr>
+		</tbody>
+	</table>
+
+	<!-- Pie Chart -->
+	<div class="col-xl-8 col-lg-5">
+		<div class="card shadow mb-4">
+			<!-- Card Header - Dropdown -->
+			<div
+				class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+				<h2 class="m-0 font-weight-bold text-primary">Ajout Village</h2>
+			</div>
+			<!-- Card Body -->
+			<div class="card-body">
+				<form th:action="@{/village/add}" method="post">
+
+					<div class="form-group">
+						<label for="nomVillage">Village</label> <input name="nomVillage"
+							type="text" class="form-control" />
+					</div>
+					<div class="form-group">
+						<input class="btn btn-success" type="submit" name="Envoyer" />
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	</div>
 </body>
 </html>
