@@ -30,11 +30,11 @@ public class VillageController {
 		v.setNomVillage(nomVillage);
 	    villagedao.save(v);
 	   
-		return "redirect:/village/"; 
+		return "redirect:/village"; 
 		
 	}
 
-	@GetMapping(value="/")
+	@GetMapping(value="")
 	public String index(Model model) {
 		
 		model.addAttribute("listeVillage", villagedao.findAll());

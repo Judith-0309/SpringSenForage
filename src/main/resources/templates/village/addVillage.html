@@ -18,6 +18,8 @@
 			<tr>
 				<td>id</td>
 				<th>Village</th>
+				<th>Action</th>
+				<th>Action</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -26,6 +28,8 @@
 		
 				<td th:text="${v.id}"></td>
 				<td th:text="${v.nomVillage}"></td>
+				<td><a href="@{/village/edit(id=${v.id})}">Editer</a></td>
+				<td><a href="@{/village/delete(id=${v.id})}">Supprimer</a></td>
 
 				</tr>
 		</tbody>
