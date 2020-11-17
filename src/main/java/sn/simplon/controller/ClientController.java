@@ -45,6 +45,10 @@ public class ClientController {
 	   clientdao.save(c);
 	   return "redirect:/client";
    }
+   
+  
+   
+   
    @GetMapping(value="")
    public String index(Model model) {
 	   model.addAttribute("listeClient",clientdao.findAll());

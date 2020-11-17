@@ -11,6 +11,10 @@
 <link th:href="@{../css/font-awesome.min.css}"rel="stylesheet}" />
 <head />
 <body>
+
+	
+	<div th:insert="header :: header"></div>
+
 	<h2>LISTE CLIENT</h2>
 	<table class="table table-bordered table-striped">
 		<thead>
@@ -52,7 +56,7 @@
 			<!-- Card Body -->
 			<div class="card-body">
 				<form th:action="@{/client/add}" method="post">
-					<div class="form-group">
+					<div class="form-group" >
 						<label>nom</label> <input class="form-control" type="text"
 							name="nom">
 					</div>
@@ -84,9 +88,9 @@
 				</form>
 			</div>
 		</div>
-	</div>
-
-
-	
+		
+	</div>	
+	 
+	<div th:insert="footer :: footer"></div>
 </body>
 </html>

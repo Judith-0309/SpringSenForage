@@ -4,14 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>VILLAGE</title>
-<link rel="stylesheet" type="text/css"
-	th:href="@{../css/bootstrap.min.css}">
-<link rel="stylesheet" type="text/css"
-	th:href="@{../css/datepicker3.css}">
+<link rel="stylesheet" type="text/css" th:href="@{../css/bootstrap.min.css}">
+<link rel="stylesheet" type="text/css" th:href="@{../css/datepicker3.css}">
 <link rel="stylesheet" type="text/css" th:href="@{../css/styles.css}"/>
 <link  rel="stylesheet}" th:href="@{../css/font-awesome.min.css}" />
 <head />
 <body>
+<div th:insert="header :: header"></div>
 
 	<table class="table table-bordered table-striped">
 		<thead>
@@ -58,6 +57,6 @@
 			</div>
 		</div>
 	</div>
-	</div>
+	<div th:insert="footer :: footer"></div>
 </body>
 </html>
