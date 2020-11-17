@@ -18,7 +18,7 @@ public class UserController {
 	@Autowired
 	private IUserDao userdao;
 	
-   @PostMapping(value="/User/connexion")
+   @PostMapping(value="/User/accueil")
    public String login() {
 	   
 	   return "accueil.html";
