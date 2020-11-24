@@ -16,5 +16,7 @@ public class SenforagespringApplication {
 	public static void main(String[] args) {
 	ApplicationContext ctx = SpringApplication.run(SenforagespringApplication.class, args);
 
+	
+	
 	}  
 }

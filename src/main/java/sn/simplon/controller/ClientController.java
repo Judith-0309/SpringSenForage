@@ -8,7 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import sn.simplon.dao.IClientDao;
 import sn.simplon.dao.IVillageDao;
@@ -54,7 +54,24 @@ public class ClientController {
 	   model.addAttribute("listeClient",clientdao.findAll());
 	   model.addAttribute("listeVillage",villagedao.findAll());
 	   return "client/add";
-   }	
+	   
+   }
+   
+   @RequestMapping(value="/Client/delete", method=RequestMethod.GET)
+   public String delete(int id) {
+	   try {
+		   clientdao.delete(clientdao.getOne(id));
+		   clientdao.flush();
+		
+	} catch (Exception e) {
+		
+	}
+	   
+	   return"redirect:/Client/liste";
+   }
+   
+   
+   
 	}
 
   
