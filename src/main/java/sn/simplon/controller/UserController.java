@@ -24,7 +24,7 @@ public class UserController {
 	   return "accueil.html";
    }
    
-   @GetMapping(value="/index")
+   @GetMapping(value="/indexe")
    public String  index(Model model) {
 	  return "index";
    }
